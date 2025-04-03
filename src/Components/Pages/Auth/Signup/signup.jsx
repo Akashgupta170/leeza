@@ -45,16 +45,16 @@ const SignUp = () => {
 
           <form className="space-y-4 bg-white p-6 rounded-lg shadow-md" onSubmit={handleSignUp}>
 
-          <div>
-        <label className="block text-sm font-medium text-gray-700">User  Name</label>
-        <input
-          type="text"
-          className="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-          placeholder="Enter your Last Name"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
+        <div>
+          <label className="block text-sm font-medium text-gray-700">User Name</label>
+          <input
+            type="text"
+            className="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+            placeholder="Enter your Last Name"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">First Name</label>

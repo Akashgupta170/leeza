@@ -98,15 +98,15 @@ function Hero() {
 
           {/* Signup Button (Desktop Only) */}
           <div className="mx-4">
-            <ScrollLink
-              to="subscription"
+            <Link
+              to="/signup"
               className="hidden md:block cursor-pointer text-lg py-2 px-8 border text-white bg-[#0C3891] rounded-full"
               smooth={true}
               duration={500}
               offset={-50}
             >
               Signup
-            </ScrollLink>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
