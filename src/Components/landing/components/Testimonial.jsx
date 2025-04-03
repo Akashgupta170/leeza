@@ -6,6 +6,8 @@ import profile3 from "../Assets/Julie.jpg";
 import profile4 from "../Assets/Johnny.jpeg";
 import testimonialquatation from "../../assest/landingassests/categeories/testimonialquatation.png";
 import Star from "../../assest/landingassests/categeories/star.png";
+import { motion } from "framer-motion";
+import {fadeIn} from '../../../variants';
 
 const testimonials = [
   {
@@ -53,7 +55,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
@@ -89,12 +91,22 @@ const Testimonial = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto">
-          <h1 className="text-2xl md:text-4xl font-bold text-black">Creative Journeys</h1>
+          <motion.h1 
+          variants={fadeIn("up",0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
+          className="text-2xl md:text-4xl font-bold text-black">Creative Journeys</motion.h1>
         </div>
         <div className='py-10'>
           <Slider {...settings}>
             {reorderedTestimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-100 p-8 rounded-lg shadow-lg relative flex flex-col gap-4 mb-8 max-w-[95%] min-h-[380px]">
+              <motion.div
+              variants={fadeIn("up",0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{once:false,amount:0.7}}
+              key={testimonial.id} className="bg-gray-100 p-8 rounded-lg shadow-lg relative flex flex-col gap-4 mb-8 max-w-[95%] min-h-[380px]">
               {/* Quotation marks */}
               <div className="absolute top-1 left-8 text-4xl text-gray-400">
                 <img src={testimonialquatation} alt="" />
@@ -123,7 +135,7 @@ const Testimonial = () => {
                 <img src={Star} alt="" className="w-8" />
                 <img src={Star} alt="" className="w-8" />
               </div>
-            </div>
+            </motion.div>
             
             ))}
           </Slider>

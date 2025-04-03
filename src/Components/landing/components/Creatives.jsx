@@ -1,25 +1,34 @@
 import { motion } from "framer-motion";
 import check2 from '../../assest/landingassests/categeories/check2.png'
 import creative from '../../assest/landingassests/categeories/creatives.jpg'
+import {fadeIn} from '../../../variants';
 
 export default function CreativesSection() {
   return (
     
     <section className="py-20" >
-      <h2 className="text-center mb-16 text-4xl font-bold">Unlock Endless Possibilities for Creatives and Companies</h2>
+      <motion.h2 
+      variants={fadeIn("up",0.1)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{once:false,amount:0.7}}
+      className="text-center mb-16 text-4xl font-bold">Unlock Endless Possibilities for Creatives and Companies</motion.h2>
      <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 overflow-hidden"> 
        {/* Image with Subtle Depth Effect */}
        <motion.div
         className="relative max-w-lg lg:max-w-xl"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        variants={fadeIn("up",0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once:false,amount:0.7}}
       >
         
         <motion.div
           className=""
-          whileHover={{ scale: 1.03, rotate: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          variants={fadeIn("up",0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
         >
           <img
             src={creative}
@@ -33,32 +42,21 @@ export default function CreativesSection() {
       {/* Text Content */}
       <motion.div
         className="lg:ml-16 mt-12 lg:mt-0 max-w-2xl"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        variants={fadeIn("up",0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once:false,amount:0.7}}
       >
 
-        <motion.h3
-          className="text-4xl font-bold text-[#0c3891] mb-5"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        >
-          Creatives
-        </motion.h3>
+        <h3 className="text-4xl font-bold text-[#0c3891] mb-5">Creatives</h3>
 
         {/* Staggered List Items */}
         <motion.ul
           className="space-y-5"
+          variants={fadeIn("up",0.1)}
           initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: { staggerChildren: 0.3, delayChildren: 0.2 },
-            },
-          }}
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
         >
           {[
             { title: "Showcase Your Work", desc: "Build a dynamic portfolio that gets noticed by industry leaders." },
@@ -69,10 +67,10 @@ export default function CreativesSection() {
             <motion.li
               key={index}
               className="flex items-start space-x-4"
-              variants={{
-                hidden: { opacity: 0, x: 20 },
-                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-              }}
+              variants={fadeIn("up",0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{once:false,amount:0.7}}
             >
               <img src={check2} alt="" className="w-7"/>
               <div>

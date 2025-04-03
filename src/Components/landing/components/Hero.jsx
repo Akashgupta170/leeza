@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import {fadeIn} from '../../../variants';
 // import bgimage from "../Assets/desktopbg2.png";
 // import heroimage from "../Assets/heroimg.png";
 // import Box1 from "../Assets/Box1.png";
@@ -190,18 +191,20 @@ function Hero() {
             {/* Text Section */}
             <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left space-y-6">
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                variants={fadeIn("up",0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
                 className="text-2xl lg:text-5xl font-extrabold text-white leading-tight"
               >
                 Elevate Your Creative Journey at Cannes and Martha’s Vineyard
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                variants={fadeIn("up",0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
                 className="text-gray-200 text-lg"
               >
                 Join a global platform connecting talent and companies through
@@ -209,9 +212,10 @@ function Hero() {
               </motion.p>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                variants={fadeIn("up",0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
                 className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 mt-6"
               >
                 <a

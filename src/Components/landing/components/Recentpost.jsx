@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion} from "framer-motion";
+import {fadeIn} from '../../../variants';
 
 const Recentpost = () => {
   const posts = [
@@ -27,20 +29,35 @@ const Recentpost = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Title and Description */}
         <div className="text-center mb-10" data-aos="fade-up">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Experience the Magic of Iconic Events</h2>
-          <p className="text-gray-600 mt-2">
+          <motion.h2 
+           variants={fadeIn("up",0.1)}
+           initial="hidden"
+           whileInView={"show"}
+           viewport={{once:false,amount:0.7}}
+           className="text-2xl md:text-4xl font-bold text-gray-900">Experience the Magic of Iconic Events</motion.h2>
+          <motion.p 
+            variants={fadeIn("up",0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once:false,amount:0.7}}
+          className="text-gray-600 mt-2">
             Step into the world of creativity and innovation at Cannes and Martha’s Vineyard. Connect with like-minded professionals, <br />
             showcase your talent, and unlock new opportunities.
-          </p>
+          </motion.p>
         </div>
 
         {/* Posts Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 w-full">
+        <div 
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 w-full">
           {posts.map(post => (
             <div key={post.id} className="relative w-full h-96 rounded-lg overflow-hidden">
-              <img
+              <motion.img
+                variants={fadeIn("up",0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
                 src={post.img}
-                alt={`Image for ${post.title}`}
+                alt={post.author}
                 className="w-full h-full object-cover rounded-lg"
               />
               <div className="absolute bottom-4 left-4 text-white">

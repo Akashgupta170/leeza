@@ -121,33 +121,29 @@ function Footer() {
             <div className="flex items-center justify-end space-x-4 my-4">
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/people/Cumulusrip/61568592287663/?mibextid=wwXIfr&rdid=jrWM0LjyBHdnRjPy&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18SWVu8zzy%2F%3Fmibextid%3DwwXIfr"
+                  href="#"
                   className="text-white cursor-pointer hover:text-blue-500"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={facebook} alt="" className='w-7' />
                 </a>
                 <a
-                  href="https://x.com/cumulus_storage?s=21&t=TrGJxI9PFd51mfG5IP7grg"
+                  href="#"
                   className="text-white cursor-pointer hover:text-blue-500"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={twitter} alt="" className='w-7' />
                 </a>
                 <a
-                  href="https://www.instagram.com/cumulus.rip?igsh=b3VmejZnbjR5Ym9s"
+                  href="#"
                   className="text-white cursor-pointer hover:text-blue-500"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={instagram} alt="" className='w-7' />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/cumulus-rip"
+                  href="#"
                   className="text-white cursor-pointer hover:text-blue-500"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={linkedin} alt="" className='w-7' />
@@ -163,19 +159,19 @@ function Footer() {
       <div className="mt-10 text-white">
         <ul className='flex justify-center'>
           <li>
-            <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-lg hover:text-gray-200">Contact us</ScrollLink>
+            <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-sm md:text-lg hover:text-gray-200">Contact us</ScrollLink>
           </li>
           <li className='mx-2'>
             |
           </li>
           <li>
-          <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-lg text-white hover:text-gray-200">Privacy policy</ScrollLink>
+          <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-sm md:text-lg text-white hover:text-gray-200">Privacy policy</ScrollLink>
           </li>
           <li className='mx-2'>
             |
           </li>
           <li>
-          <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-lg text-white hover:text-gray-200">Term and condition</ScrollLink>
+          <ScrollLink to="home" smooth={true} duration={500} offset={0} className="cursor-pointer text-sm md:text-lg text-white hover:text-gray-200">Term and condition</ScrollLink>
           </li>
         </ul>
       </div>

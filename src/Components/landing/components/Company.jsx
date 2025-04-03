@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {fadeIn} from '../../../variants';
 import check2 from '../../assest/landingassests/categeories/check2.png';
 import company from '../../assest/landingassests/categeories/companies.jpg';
 
@@ -11,14 +12,17 @@ const CompanySignup = () => {
         {/* Image with Subtle Depth Effect */}
         <motion.div
           className="relative max-w-lg lg:max-w-xl order-1 lg:order-2" // Ensure image comes first on small screens, second on large screens
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          variants={fadeIn("up",0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
         >
           <motion.div
             className=" "
-            whileHover={{ scale: 1.03, rotate: 1 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            variants={fadeIn("up",0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once:false,amount:0.7}}
           >
             <img
               src={company}
@@ -31,15 +35,17 @@ const CompanySignup = () => {
         {/* Text Content */}
         <motion.div
           className="lg:ml-16 mt-12 lg:mt-0 max-w-2xl order-2 lg:order-1" // Ensure text comes second on small screens, first on large screens
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          variants={fadeIn("up",0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
         >
           <motion.h3
             className="text-4xl font-bold text-[#0c3891] mb-5"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            variants={fadeIn("up",0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once:false,amount:0.7}}
           >
             Companies
           </motion.h3>
@@ -47,15 +53,10 @@ const CompanySignup = () => {
           {/* Staggered List Items */}
           <motion.ul
             className="space-y-5"
+            variants={fadeIn("up",0.1)}
             initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.3, delayChildren: 0.2 },
-              },
-            }}
+            whileInView={"show"}
+            viewport={{once:false,amount:0.7}}
           >
             {[
               { title: "Showcase Your Work", desc: "Build a dynamic portfolio that gets noticed by industry leaders." },
@@ -66,10 +67,10 @@ const CompanySignup = () => {
               <motion.li
                 key={index}
                 className="flex items-start space-x-4"
-                variants={{
-                  hidden: { opacity: 0, x: 20 },
-                  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-                }}
+                variants={fadeIn("up",0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
               >
                 <img src={check2} alt="" className="w-7" />
                 <div>

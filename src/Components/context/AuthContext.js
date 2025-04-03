@@ -82,7 +82,7 @@ export const AuthProvider = ({ children }) => {
         });
 
         const data = await response.json();
-console.log("responseeee",data);
+        console.log("responseeee",data);
         if (!response.ok) {
             throw new Error(data.message || "Signup failed. Please try again.");
         }

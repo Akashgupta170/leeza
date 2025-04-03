@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import {fadeIn} from '../../../variants';
 import first from "../../assest/landingassests/categeories/1.png";
 import second from "../../assest/landingassests/categeories/2.png";
 import third from "../../assest/landingassests/categeories/3.png";
@@ -33,10 +34,13 @@ const JobCategories = () => {
         {jobCategories.map((job, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
+            variants={fadeIn("up",0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            whileHover={{
+              scale: 1.1, // Scale effect on hover (you can adjust this)
+              transition: { duration: 0.9 }
+            }}
             className="bg-white shadow-lg  overflow-hidden text-center border  border-b-4 border-[#0C3891]"
           >
             <div className="w-40 h-40 mx-auto overflow-hidden  flex justify-center items-center"> {/* Corrected border class */}
