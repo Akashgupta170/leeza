@@ -15,7 +15,7 @@ const testimonials = [
     name: "Joseph",
     role: "Independent filmmaker",
     image: profile1,
-    review: "Sharing important memories and legal documents with my loved ones has never been easier. Cumulus is a lifesaver!",
+    review: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolore eius mollitia molestias architecto. Unde dignissimos sequi alias necessitatibus quod.",
     
 },
   {
@@ -23,21 +23,21 @@ const testimonials = [
     name: "Sarah",
     role: "Singer song writer",
     image: profile2,
-    review: "Sharing important memories and legal documents with my loved ones has never been easier. Cumulus is a lifesaver!",
+    review: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolore eius mollitia molestias architecto. Unde dignissimos sequi alias necessitatibus quod.",
   },
   {
     id: 3,
     name: "Julie",
     role: "Fashion photographer",
     image: profile3,
-    review: "Sharing important memories and legal documents with my loved ones has never been easier. Cumulus is a lifesaver!",
+    review: "        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolore eius mollitia molestias architecto. Unde dignissimos sequi alias necessitatibus quod.",
   },
   {
     id: 4,
     name: "Johnny",
     role: "Large Business Owner",
     image: profile4,
-    review: "Sharing important memories and legal documents with my loved ones has never been easier. Cumulus is a lifesaver!",
+    review: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dolore eius mollitia molestias architecto. Unde dignissimos sequi alias necessitatibus quod.",
   },
 ];
 

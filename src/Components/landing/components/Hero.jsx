@@ -99,7 +99,7 @@ function Hero() {
           {/* Signup Button (Desktop Only) */}
           <div className="mx-4">
             <Link
-              to=""
+              to="/signup"
               className="hidden md:block cursor-pointer text-lg py-2 px-8 border text-white bg-[#0C3891] rounded-full"
               smooth={true}
               duration={500}
