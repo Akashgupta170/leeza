@@ -34,20 +34,20 @@ const JobCategories = () => {
         {jobCategories.map((job, index) => (
           <motion.div
             key={index}
-            variants={fadeIn("up",0.1)}
+            variants={fadeIn("up", 0.1)}
             initial="hidden"
-            whileInView={"show"}
+            whileInView="show"
             whileHover={{
-              scale: 1.1, // Scale effect on hover (you can adjust this)
-              transition: { duration: 0.9 }
+              scale: 1.05,
+              transition: { duration: 0.4 },
             }}
-            className="bg-white shadow-lg  overflow-hidden text-center border  border-b-4 border-[#0C3891]"
+            className="bg-white shadow-lg overflow-hidden text-center border border-b-4 border-[#0C3891] rounded-lg"
           >
-            <div className="w-40 h-40 mx-auto overflow-hidden  flex justify-center items-center"> {/* Corrected border class */}
+            <div className="w-40 h-40 mx-auto overflow-hidden flex justify-center items-center">
               <img
                 src={job.image}
                 alt={job.title}
-                className="w-20 h-20 object-cover" // Ensures image fits perfectly in the square
+                className="w-20 h-20 object-cover"
               />
             </div>
             <div className="p-4">
@@ -56,6 +56,7 @@ const JobCategories = () => {
           </motion.div>
         ))}
       </div>
+
     </section>
   );
 };

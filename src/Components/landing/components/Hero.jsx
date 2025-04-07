@@ -229,23 +229,23 @@ function Hero() {
 
             {/* Floating Sidebar Image Section */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: [0, -10, 0] }}
-              transition={{
-                duration: 1,
-                delay: 0.6,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              }}
-              className="lg:w-1/2 flex justify-center items-center"
-            >
-              <img
-                src={sideimage}
-                className="w-full max-w-lg lg:max-w-2xl"
-                alt="Hero Image"
-              />
-            </motion.div>
+                initial={{ y: 20 }}
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 2.4,
+                  delay: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+                className="lg:w-1/2 flex justify-center items-center"
+              >
+                <img
+                  src={sideimage}
+                  className="w-full max-w-lg lg:max-w-2xl"
+                  alt="Hero Image"
+                />
+              </motion.div>
           </div>
         </div>
       </div>
